@@ -8,8 +8,8 @@ class Config:
     BASE_DOMAIN = os.environ.get('BASE_DOMAIN') or 'your-app-name.herokuapp.com'
     
     # Flask settings
-    DEBUG = False
-    TESTING = False
+    DEBUG = True
+    TESTING = True
     
     # Request timeout settings
     REQUEST_TIMEOUT = 10
@@ -29,7 +29,7 @@ class DevelopmentConfig(Config):
 
 class ProductionConfig(Config):
     """Production configuration"""
-    DEBUG = False
+    DEBUG = True
     
     @classmethod
     def init_app(cls, app):
